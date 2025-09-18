@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title layout:fragment="title">Category Management</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+    <header th:replace="fragments/header :: header"></header>
+
+    <main layout:fragment="content">
+        <!-- Nội dung sẽ được chèn ở đây -->
+    </main>
+
+    <footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

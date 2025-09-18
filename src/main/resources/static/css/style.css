@@ -1,0 +1,59 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+}
+
+header, footer {
+    padding: 10px 20px;
+    background: #f0f0f0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-container img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+button {
+    padding: 6px 12px;
+    margin-top: 10px;
+}
+
+.paging a {
+    margin: 0 3px;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+}
+
+.paging a.current {
+    background: #007bff;
+    color: white;
+}

@@ -1,0 +1,14 @@
+<div th:fragment="header">
+    <div class="header-container">
+        <img th:src="@{/image/TriNguyen.jpg}" alt="Ảnh SV">
+        <div>
+            <h2>Category Management</h2>
+            <p>MSSV: 23110350 – Nguyễn Hữu Trí</p>
+        </div>
+    </div>
+    <nav>
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/categories}">Categories</a>
+        <a th:href="@{/categories/add}">Add Category</a>
+    </nav>
+</div>

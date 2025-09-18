@@ -6,8 +6,41 @@
     <title>Thêm / Sửa Category</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<section layout:fragment="content" class="max-w-2xl mx-auto mt-10 bg-white p-8 rounded-2xl shadow-md">
+<body class="bg-gradient-to-r from-purple-100 to-teal-100 min-h-screen flex flex-col items-center">
+
+<!-- Header với thông tin sinh viên -->
+<div class="max-w-4xl w-full mx-auto mt-6 bg-white shadow-md rounded-xl p-4 flex items-center gap-4 border border-gray-200">
+    <!-- Ảnh -->
+    <img src="/images/avatar.jpg" alt="Avatar"
+         class="w-20 h-20 object-cover rounded-full border-2 border-purple-500">
+
+    <!-- Thông tin -->
+    <div>
+        <h2 class="text-xl font-bold text-gray-800">Category Management</h2>
+        <p class="text-gray-600">MSSV: <span class="font-medium">23110350</span> – Nguyễn Hữu Trí</p>
+    </div>
+</div>
+
+<!-- Menu -->
+<div class="max-w-4xl w-full mx-auto mt-4 bg-white shadow-md rounded-xl p-3 flex gap-4 justify-center border border-gray-200">
+    <a th:href="@{/}"
+       class="px-4 py-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg shadow hover:opacity-90 transition">
+        Home
+    </a>
+    <a th:href="@{/categories}"
+       class="px-4 py-2 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-lg shadow hover:opacity-90 transition">
+        Categories
+    </a>
+    <a th:href="@{/categories/add}"
+       class="px-4 py-2 bg-gradient-to-r from-pink-500 to-red-500 text-white rounded-lg shadow hover:opacity-90 transition">
+        Add Category
+    </a>
+</div>
+
+<hr class="w-3/4 border-gray-400 my-4"/>
+
+<!-- Content -->
+<section layout:fragment="content" class="max-w-2xl w-full bg-white p-8 rounded-2xl shadow-md">
     <h2 class="text-2xl font-bold text-gray-700 mb-6"
         th:text="${category.id} != null ? '✏️ Edit Category' : '➕ Add Category'"></h2>
 
@@ -18,14 +51,14 @@
         <div>
             <label class="block text-gray-600 font-medium mb-1">Name <span class="text-red-500">*</span></label>
             <input type="text" th:field="*{name}" required
-                   class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"/>
+                   class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"/>
         </div>
 
         <!-- Description -->
         <div>
             <label class="block text-gray-600 font-medium mb-1">Description</label>
             <textarea th:field="*{description}"
-                      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
                       rows="3"></textarea>
         </div>
 
@@ -36,11 +69,19 @@
                 Cancel
             </a>
             <button type="submit"
-                    class="px-5 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition">
+                    class="px-5 py-2 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition">
                 Save
             </button>
         </div>
     </form>
 </section>
+
+<hr class="w-3/4 border-gray-400 my-4"/>
+
+<!-- Footer -->
+<footer class="text-center py-4 text-gray-600">
+    <p>© 2025 Category Management App - Built with ❤️ & Spring Boot + Thymeleaf</p>
+</footer>
+
 </body>
 </html>
